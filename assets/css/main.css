@@ -517,7 +517,21 @@ section,
   color: var(--accent-color);
 }
 
+.descarga {
+  display: block;
+  margin: 20px auto; /* Centra el botón horizontalmente y agrega espacio superior/inferior */
+  padding: 10px 20px;
+  background-color: var(--accent-color); /* Color del botón */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: medium;
+}
 
+.descarga:hover {
+  background-color: #0056b3; /* Color del botón al pasar el mouse */
+}
 
 /*----------------MY EDITS----------------------------------------------
 /*--------------------------------------------------------------
