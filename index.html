@@ -51,6 +51,26 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
+
+  <style>
+    .sitename span {
+      transition: color 0.3s ease;
+    }
+    .sitename span.sub {
+      color: #149ddd;
+    }
+    .sitename span:not(.sub) {
+      color: rgb(255, 255, 255);
+    }
+    .sitename.inverted span.sub {
+      color: rgb(253, 253, 253);
+    }
+    .sitename.inverted span:not(.sub) {
+      color: #149ddd;
+    }
+  </style>
+
+
 </head>
 
 <body class="index-page">
@@ -59,13 +79,15 @@
     <i class="header-toggle d-xl-none bi bi-list"></i>
 
     <div class="profile-img">
-      <img src="assets/img/fotoperfil.png" alt="Foto de perfil" class="img-fluid rounded-circle">
+    <a href="index.html">
+      <img src="assets/img/fotoperfil.png" alt="Foto de perfil" class="img-fluid rounded-circle vis">
+    </a>
     </div>
 
-    <a href="index.html" class="logo d-flex align-items-center justify-content-center">
+    <a href="index.html" class="logo d-flex align-items-center justify-content-center"onclick="invertColors(event)">
       <!-- Uncomment the line below if you also wish to use an image logo -->
       <!-- <img src="assets/img/logo.png" alt=""> -->
-      <h1 class="sitename"><span class="sub">Nacho</span> <span class="sub"></span>Naves</h1>
+      <h1 class="sitename"><span class="sub">Nacho</span> <span>Naves</span></h1>
     </a>
 
     <div class="social-links text-center">
@@ -580,15 +602,14 @@
 
   </main>
 
-  <footer id="footer" class="footer position-relative light-background">
+  <footer id="footer" class="footer position-relative">
 
     <div class="container">
       <div class="copyright text-center ">
         <p>© <span>Copyright</span> <strong class="px-1 sitename"></strong><a href="https://bootstrapmade.com/"><span>All Rights Reserved</a> </span></p>
       </div>
       <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you've purchased the pro version. -->
+      
         <!-- Licensing information: https://bootstrapmade.com/license/ -->
         <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
         Designed by <span class="sub"> Nacho Naves
@@ -648,7 +669,7 @@
         speed *= deceleration;
   
         // Si la velocidad es suficientemente baja, detenemos la animación
-        if (speed < 0.5) {
+        if (speed < 0.7) {
           cancelAnimationFrame(animationFrame); // Detenemos la animación
           // Redondeamos la rotación para detenerla en un múltiplo de 360°
           const finalRotation = Math.round(rotation / 360) * 360;
@@ -663,7 +684,13 @@
       animationFrame = requestAnimationFrame(animate);
     }
   </script>
-
+  <script>
+    function invertColors(event) {
+      event.preventDefault(); // Evita recargar la página
+      const title = document.querySelector('.sitename');
+      title.classList.toggle('inverted'); // Invierte los colores al alternar la clase
+    }
+  </script>
 </body>
 
 </html>
