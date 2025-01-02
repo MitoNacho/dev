@@ -40,8 +40,9 @@
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
 
 .light-background {
-  --background-color: #f4fafd;
-  --surface-color: #ffffff;
+  --background-color: #149ddd4c;
+
+  --surface-color: var(--accent-color);
 }
 
 .dark-background {
@@ -157,12 +158,16 @@ h6 {
   border-right: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
 }
 
+
+
 .header .profile-img img {
   margin: 15px auto;
   display: block;
   width: 120px;
   border: 8px solid color-mix(in srgb, var(--default-color), transparent 85%);
+  
 }
+
 
 .header .logo {
   line-height: 1;
@@ -533,6 +538,17 @@ section,
   background-color: #0056b3; /* Color del botón al pasar el mouse */
 }
 
+
+
+.vis{
+background-color: #050d18; 
+}
+
+.vis:hover {
+background-color: var(--accent-color);  
+}
+
+
 /*----------------MY EDITS----------------------------------------------
 /*--------------------------------------------------------------
 
@@ -851,8 +867,8 @@ section,
   cursor: pointer;
   display: inline-block;
   padding: 0;
-  font-size: 14px;
-  font-weight: 400;
+  font-size: 17px;
+  font-weight: 500;
   margin: 0 10px;
   line-height: 1;
   text-transform: uppercase;
